@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                                   
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:tag="layout/activity_search_0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText
+            android:id="@+id/Input_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+        />
+    <Button
+            android:id="@+id/Search_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="搜索"
+            android:background="@color/springgreen"
+            android:textColor="@color/white"
+        />
+    <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true">
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
+         
