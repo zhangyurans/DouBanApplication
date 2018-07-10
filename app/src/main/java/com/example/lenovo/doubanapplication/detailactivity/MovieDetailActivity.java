@@ -1,16 +1,18 @@
-package com.example.lenovo.doubanapplication;
+package com.example.lenovo.doubanapplication.detailactivity;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.ScrollView;
-import android.widget.TextView;
 
+import com.example.lenovo.doubanapplication.BaseActivity;
+import com.example.lenovo.doubanapplication.HttpUtil;
+import com.example.lenovo.doubanapplication.LogUtil;
+import com.example.lenovo.doubanapplication.detailclass.MovieDetail;
+import com.example.lenovo.doubanapplication.R;
+import com.example.lenovo.doubanapplication.databinding.ActivityDetailBinding;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
@@ -20,26 +22,13 @@ import okhttp3.Call;
 import okhttp3.Response;
 
 public class MovieDetailActivity extends BaseActivity {
-    ScrollView scrollView;
-    TextView detailText;
-    TextView titleText;
-    TextView idText;
-    TextView languageText;
-    TextView countryText;
-    ImageView Image;
+    private ActivityDetailBinding mbinding;
     MovieDetail Detail=new MovieDetail();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
-        scrollView=(ScrollView)findViewById(R.id.scroll_View);
-        detailText=(TextView)findViewById(R.id.detail_text);
-        titleText=(TextView)findViewById(R.id.title_text);
-        idText=(TextView)findViewById(R.id.id_text);
-        languageText=(TextView)findViewById(R.id.language_text);
-        countryText=(TextView)findViewById(R.id.country_text);
-        Image=(ImageView)findViewById(R.id.image_view);
-        scrollView.setBackgroundColor(getResources().getColor(R.color.doubanmoviebackground));
+        mbinding= DataBindingUtil.setContentView(this,R.layout.activity_detail);
+        mbinding.scrollView.setBackgroundColor(getResources().getColor(R.color.doubanmoviebackground));
         Intent intent1=getIntent();
         final String movieidData=intent1.getStringExtra("movieid_data");
         HttpUtil.sendOKHttpRequest("https://api.douban.com/v2/movie/subject/"+movieidData,new okhttp3.Callback(){
@@ -51,28 +40,28 @@ public class MovieDetailActivity extends BaseActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        titleText.setText(Detail.getTitle());
-                        Picasso.with(MovieDetailActivity.this).load(Detail.getImages().getLarge()).error(R.drawable.douban1).into(Image);
+                        mbinding.titleText.setText(Detail.getTitle());
+                        Picasso.get().load(Detail.getImages().getLarge()).error(R.drawable.douban1).into(mbinding.imageView);
                         if (TextUtils.isEmpty(Detail.getLanguage())){
-                            languageText.setVisibility(View.GONE);
+                            mbinding.languageText.setVisibility(View.GONE);
                         }
                         else{
-                            languageText.setText("语言："+Detail.getLanguage());
+                            mbinding.languageText.setText("语言："+Detail.getLanguage());
                         }
                         if(TextUtils.isEmpty(Detail.getCountry())){
-                            countryText.setVisibility(View.GONE);
+                            mbinding.countryText.setVisibility(View.GONE);
                         }
                         else {
-                            countryText.setText("国家："+Detail.getCountry());
+                            mbinding.countryText.setText("国家："+Detail.getCountry());
                         }
                         if(TextUtils.isEmpty(Detail.getSummary())){
-                            detailText.setText("简介：暂无介绍");
+                            mbinding.detailText.setText("简介：暂无介绍");
                         }
                         else{
-                            detailText.setText("简介："+Detail.getSummary());
+                            mbinding.detailText.setText("简介：\n"+Detail.getSummary());
                         }
-                        idText.setText("电影id："+movieidData);
-                        Log.d("BookDetailActivity","标题是"+Detail.getTitle());
+                        mbinding.idText.setText("电影id："+movieidData);
+                        LogUtil.d("BookDetailActivity","标题是《"+Detail.getTitle()+"》");
                     }
                 });
             }

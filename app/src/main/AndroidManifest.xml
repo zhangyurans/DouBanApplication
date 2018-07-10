@@ -3,6 +3,8 @@
     package="com.example.lenovo.doubanapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -10,6 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name=".TestApplication"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -19,25 +22,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BookDetailActivity"
-            android:label="书籍详情" />
-        <activity
-            android:name=".BooklistActivity"
+            android:name=".listactivity.BooklistActivity"
             android:label="书籍搜索结果" />
         <activity
-            android:name=".BooksearchActivity"
-            android:label="搜索书籍" />
-        <activity
-            android:name=".MovielistActivity"
+            android:name=".listactivity.MovielistActivity"
             android:label="电影搜索结果" />
         <activity
-            android:name=".MusiclistActivity"
+            android:name=".listactivity.MusiclistActivity"
             android:label="音乐搜索结果" />
         <activity
-            android:name=".MovieDetailActivity"
+            android:name=".detailactivity.BookDetailActivity"
+            android:label="书籍详情" />
+        <activity
+            android:name=".detailactivity.MovieDetailActivity"
             android:label="电影详情" />
         <activity
-            android:name=".MusicDetailActivity"
+            android:name=".detailactivity.MusicDetailActivity"
             android:label="音乐详情" />
     </application>
 

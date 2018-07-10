@@ -1,4 +1,4 @@
-package com.example.lenovo.doubanapplication;
+package com.example.lenovo.doubanapplication.detailclass;
 
 /**
  * Created by lenovo on 2017/8/11.

@@ -1,19 +1,18 @@
-package com.example.lenovo.doubanapplication;
+package com.example.lenovo.doubanapplication.search;
 
 import java.util.List;
 
 /**
- * Created by lenovo on 2017/8/8.
+ * Created by lenovo on 2017/8/11.
  */
-
-public class SearchBook {
+public class SearchMovie {
     private int count;
     private int start;
     private int total;
-    private List<Books> books;
-    public class Books{
-        private String id;
+    private List<Subject>subjects;
+    public class Subject{
         private String title;
+        private String id;
         private Images images;
         public class Images{
             private String small;
@@ -29,11 +28,11 @@ public class SearchBook {
                 return large;
             };
         }
-        public String getId(){
-            return id;
-        }
         public String getTitle(){
             return title;
+        }
+        public String getId(){
+            return id;
         }
         public Images getImages(){
             return images;
@@ -48,7 +47,7 @@ public class SearchBook {
     public int getTotal(){
         return total;
     }
-    public List<Books>getBooks(){
-        return books;
+    public List<Subject>getSubjects(){
+        return subjects;
     }
 }

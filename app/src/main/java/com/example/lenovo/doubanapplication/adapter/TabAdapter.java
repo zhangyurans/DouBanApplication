@@ -1,4 +1,4 @@
-package com.example.lenovo.doubanapplication;
+package com.example.lenovo.doubanapplication.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

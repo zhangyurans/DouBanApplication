@@ -162,4 +162,5 @@
     <color name="doubanmusicsearchtext">#F37E00</color><!--豆瓣音乐输入文字颜色 -->
     <color name="doubanmusicsearchhint">#F1C28A</color><!--豆瓣音乐提示性文字颜色 -->
     <color name="doubantabcolor">#545652</color>
+    <color name="clarity">#00000000</color><!--透明色 -->
 </resources>

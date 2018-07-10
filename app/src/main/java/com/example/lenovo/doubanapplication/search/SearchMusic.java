@@ -1,4 +1,4 @@
-package com.example.lenovo.doubanapplication;
+package com.example.lenovo.doubanapplication.search;
 
 import java.util.List;
 

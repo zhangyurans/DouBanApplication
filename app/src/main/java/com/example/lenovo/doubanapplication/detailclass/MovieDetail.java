@@ -1,16 +1,15 @@
-package com.example.lenovo.doubanapplication;
-
-import java.util.List;
+package com.example.lenovo.doubanapplication.detailclass;
 
 /**
- * Created by lenovo on 2017/8/9.
+ * Created by lenovo on 2017/8/11.
  */
 
-public class BookDetail {
+public class MovieDetail {
     private String title;
     private String summary;
+    private String language;
+    private String country;
     private Images images;
-    private List<String> author;
     public class Images{
         private String small;
         private String medium;
@@ -31,10 +30,13 @@ public class BookDetail {
     public String getSummary(){
         return summary;
     }
+    public String getLanguage(){
+        return language;
+    }
+    public String getCountry(){
+        return country;
+    }
     public Images getImages(){
         return images;
-    }
-    public List<String>getAuthor(){
-        return author;
     }
 }
