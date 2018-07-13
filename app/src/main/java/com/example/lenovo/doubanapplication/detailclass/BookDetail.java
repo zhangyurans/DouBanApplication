@@ -1,5 +1,6 @@
 package com.example.lenovo.doubanapplication.detailclass;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,30 +12,45 @@ public class BookDetail {
     private String summary;
     private Images images;
     private List<String> author;
-    public class Images{
+
+    public BookDetail() {
+        title = "";
+        summary = "";
+        images = new Images();
+        author = new ArrayList<>();
+    }
+
+    public class Images {
         private String small;
         private String medium;
         private String large;
-        public String getSmall(){
+
+        public String getSmall() {
             return small;
         }
-        public String getMedium(){
+
+        public String getMedium() {
             return medium;
         }
-        public String getLarge(){
+
+        public String getLarge() {
             return large;
         }
     }
-    public String getTitle(){
+
+    public String getTitle() {
         return title;
     }
-    public String getSummary(){
+
+    public String getSummary() {
         return summary;
     }
-    public Images getImages(){
+
+    public Images getImages() {
         return images;
     }
-    public List<String>getAuthor(){
+
+    public List<String> getAuthor() {
         return author;
     }
 }

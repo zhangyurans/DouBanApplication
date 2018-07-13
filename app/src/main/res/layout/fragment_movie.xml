@@ -1,39 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-<LinearLayout
-    android:id="@+id/moviefragment_layout"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/doubanmoviebackground"
-    >
-    <EditText
-        android:id="@+id/Input_movietext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:maxLines="2"
-        android:textColor="@color/doubanmoviesearchtext"
-        android:textColorHint="@color/doubanbooksearchhint"
-        android:hint="请输入所需查找的电影名"
-        />
-    <Button
-        android:id="@+id/Search_moviebutton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="搜索电影"
-        android:background="@color/doubanmoviebutton"
-        android:textColor="@color/white"
-        />
-    <android.support.design.widget.CoordinatorLayout
-        android:id="@+id/moviecontainer"
+
+    <LinearLayout
+        android:id="@+id/moviefragment_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true">
-        <ImageView
-            android:id="@+id/movie_image"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </android.support.design.widget.CoordinatorLayout>
+        android:background="@color/doubanmoviebackground"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/Input_movietext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入所需查找的电影名"
+            android:imeOptions="actionSearch"
+            android:maxLines="2"
+            android:textColor="@color/doubanmoviesearchtext"
+            android:textColorHint="@color/doubanbooksearchhint" />
+
+        <Button
+            android:id="@+id/Search_moviebutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/doubanmoviebutton"
+            android:text="搜索电影"
+            android:textColor="@color/white" />
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/moviecontainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/movie_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.design.widget.CoordinatorLayout>
+
+    </LinearLayout>
 </layout>

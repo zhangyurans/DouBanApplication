@@ -10,13 +10,14 @@ import java.util.List;
  * Created by lenovo on 2017/8/17.
  */
 
-public class TabAdapter extends FragmentPagerAdapter{
-    private List<Fragment>listFragment;
-    private List<String>listTitle;
-    public TabAdapter(FragmentManager fm,List<String>listS,List<Fragment>listF){
+public class TabAdapter extends FragmentPagerAdapter {
+    private List<Fragment> listFragment;
+    private List<String> listTitle;
+
+    public TabAdapter(FragmentManager fm, List<String> listS, List<Fragment> listF) {
         super(fm);
-        listFragment=listF;
-        listTitle=listS;
+        listFragment = listF;
+        listTitle = listS;
     }
 
     @Override

@@ -21,7 +21,7 @@ public class ActivityListBinding extends android.databinding.ViewDataBinding  {
     @NonNull
     public final android.widget.LinearLayout listLayout;
     @NonNull
-    public final android.support.v7.widget.RecyclerView recyclerView;
+    public final com.jcodecraeer.xrecyclerview.XRecyclerView recyclerView;
     @NonNull
     public final android.widget.TextView textNullview;
     // variables
@@ -34,7 +34,7 @@ public class ActivityListBinding extends android.databinding.ViewDataBinding  {
         final Object[] bindings = mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds);
         this.listLayout = (android.widget.LinearLayout) bindings[0];
         this.listLayout.setTag(null);
-        this.recyclerView = (android.support.v7.widget.RecyclerView) bindings[2];
+        this.recyclerView = (com.jcodecraeer.xrecyclerview.XRecyclerView) bindings[2];
         this.textNullview = (android.widget.TextView) bindings[1];
         setRootTag(root);
         // listeners

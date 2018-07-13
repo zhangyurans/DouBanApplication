@@ -7,14 +7,14 @@ class DataBinderMapperImpl extends android.databinding.DataBinderMapper {
     @Override
     public android.databinding.ViewDataBinding getDataBinder(android.databinding.DataBindingComponent bindingComponent, android.view.View view, int layoutId) {
         switch(layoutId) {
-                case com.example.lenovo.doubanapplication.R.layout.activity_search:
+                case com.example.lenovo.doubanapplication.R.layout.item_header:
  {
                         final Object tag = view.getTag();
                         if(tag == null) throw new java.lang.RuntimeException("view must have a tag");
-                    if ("layout/activity_search_0".equals(tag)) {
-                            return new com.example.lenovo.doubanapplication.databinding.ActivitySearchBinding(bindingComponent, view);
+                    if ("layout/item_header_0".equals(tag)) {
+                            return new com.example.lenovo.doubanapplication.databinding.ItemHeaderBinding(bindingComponent, view);
                     }
-                        throw new java.lang.IllegalArgumentException("The tag for activity_search is invalid. Received: " + tag);
+                        throw new java.lang.IllegalArgumentException("The tag for item_header is invalid. Received: " + tag);
                 }
                 case com.example.lenovo.doubanapplication.R.layout.fragment_music:
  {
@@ -95,9 +95,9 @@ class DataBinderMapperImpl extends android.databinding.DataBinderMapper {
         }
         final int code = tag.hashCode();
         switch(code) {
-            case 101625572: {
-                if(tag.equals("layout/activity_search_0")) {
-                    return com.example.lenovo.doubanapplication.R.layout.activity_search;
+            case -1545131899: {
+                if(tag.equals("layout/item_header_0")) {
+                    return com.example.lenovo.doubanapplication.R.layout.item_header;
                 }
                 break;
             }

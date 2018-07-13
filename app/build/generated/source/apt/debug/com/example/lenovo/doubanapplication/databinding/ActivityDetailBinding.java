@@ -14,13 +14,14 @@ public class ActivityDetailBinding extends android.databinding.ViewDataBinding  
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.title_text, 1);
-        sViewsWithIds.put(R.id.id_text, 2);
-        sViewsWithIds.put(R.id.language_text, 3);
-        sViewsWithIds.put(R.id.country_text, 4);
-        sViewsWithIds.put(R.id.image_view, 5);
-        sViewsWithIds.put(R.id.detail_text, 6);
-        sViewsWithIds.put(R.id.image_button, 7);
+        sViewsWithIds.put(R.id.image_button2, 1);
+        sViewsWithIds.put(R.id.title_text, 2);
+        sViewsWithIds.put(R.id.id_text, 3);
+        sViewsWithIds.put(R.id.language_text, 4);
+        sViewsWithIds.put(R.id.country_text, 5);
+        sViewsWithIds.put(R.id.image_view, 6);
+        sViewsWithIds.put(R.id.detail_text, 7);
+        sViewsWithIds.put(R.id.image_button, 8);
     }
     // views
     @NonNull
@@ -31,6 +32,8 @@ public class ActivityDetailBinding extends android.databinding.ViewDataBinding  
     public final android.widget.TextView idText;
     @NonNull
     public final android.widget.ImageButton imageButton;
+    @NonNull
+    public final android.widget.ImageButton imageButton2;
     @NonNull
     public final android.widget.ImageView imageView;
     @NonNull
@@ -46,16 +49,17 @@ public class ActivityDetailBinding extends android.databinding.ViewDataBinding  
 
     public ActivityDetailBinding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 0);
-        final Object[] bindings = mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds);
-        this.countryText = (android.widget.TextView) bindings[4];
-        this.detailText = (android.widget.TextView) bindings[6];
-        this.idText = (android.widget.TextView) bindings[2];
-        this.imageButton = (android.widget.ImageButton) bindings[7];
-        this.imageView = (android.widget.ImageView) bindings[5];
-        this.languageText = (android.widget.TextView) bindings[3];
+        final Object[] bindings = mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds);
+        this.countryText = (android.widget.TextView) bindings[5];
+        this.detailText = (android.widget.TextView) bindings[7];
+        this.idText = (android.widget.TextView) bindings[3];
+        this.imageButton = (android.widget.ImageButton) bindings[8];
+        this.imageButton2 = (android.widget.ImageButton) bindings[1];
+        this.imageView = (android.widget.ImageView) bindings[6];
+        this.languageText = (android.widget.TextView) bindings[4];
         this.scrollView = (android.widget.ScrollView) bindings[0];
         this.scrollView.setTag(null);
-        this.titleText = (android.widget.TextView) bindings[1];
+        this.titleText = (android.widget.TextView) bindings[2];
         setRootTag(root);
         // listeners
         invalidateAll();

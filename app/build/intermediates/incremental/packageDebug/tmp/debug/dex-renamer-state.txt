@@ -1,4 +1,4 @@
-#Tue Jul 10 18:32:28 CST 2018
+#Fri Jul 13 21:38:43 CST 2018
 base.0=E\:\\AndroidStudioProjects\\DouBanApplication\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\203
 path.0=classes.dex
 renamed.0=classes.dex

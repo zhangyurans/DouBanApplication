@@ -8,6 +8,10 @@ public class MusicDetail {
     private String title;
     private String summary;
     private String image;
+    public MusicDetail(){
+        title="";
+        summary="";
+    }
     public String getTitle(){
         return title;
     }

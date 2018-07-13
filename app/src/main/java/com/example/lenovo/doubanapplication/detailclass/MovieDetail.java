@@ -1,5 +1,6 @@
 package com.example.lenovo.doubanapplication.detailclass;
 
+
 /**
  * Created by lenovo on 2017/8/11.
  */
@@ -10,6 +11,13 @@ public class MovieDetail {
     private String language;
     private String country;
     private Images images;
+    public MovieDetail(){
+        title="";
+        summary="";
+        language="";
+        country="";
+        images=new MovieDetail.Images();
+    }
     public class Images{
         private String small;
         private String medium;

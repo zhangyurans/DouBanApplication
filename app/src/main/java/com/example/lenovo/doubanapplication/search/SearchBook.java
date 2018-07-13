@@ -1,5 +1,6 @@
 package com.example.lenovo.doubanapplication.search;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,44 +12,73 @@ public class SearchBook {
     private int start;
     private int total;
     private List<Books> books;
-    public class Books{
+
+    public SearchBook() {
+        count = 0;
+        start = 0;
+        total = 0;
+        books = new ArrayList<>();
+    }
+
+    public class Books {
         private String id;
         private String title;
         private Images images;
-        public class Images{
+
+        public class Images {
             private String small;
             private String medium;
             private String large;
-            public String getSmall(){
+
+            public String getSmall() {
                 return small;
-            };
-            public String getMedium(){
+            }
+
+            ;
+
+            public String getMedium() {
                 return medium;
-            };
-            public String getLarge(){
+            }
+
+            ;
+
+            public String getLarge() {
                 return large;
-            };
+            }
+
+            ;
         }
-        public String getId(){
+
+        public String getId() {
             return id;
         }
-        public String getTitle(){
+
+        public String getTitle() {
             return title;
         }
-        public Images getImages(){
+
+        public Images getImages() {
             return images;
         }
     }
-    public int getCount(){
+
+    public int getCount() {
         return count;
     }
-    public int getStart(){
+
+    public int getStart() {
         return start;
     }
-    public int getTotal(){
+
+    public int getTotal() {
         return total;
     }
-    public List<Books>getBooks(){
+
+    public void setStart(int mStart) {
+        start = mStart;
+    }
+
+    public List<Books> getBooks() {
         return books;
     }
 }

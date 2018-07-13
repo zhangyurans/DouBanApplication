@@ -4,8 +4,8 @@
         "source": "E:\\AndroidStudioProjects\\DouBanApplication\\app\\src\\main\\res\\layout\\fragment_book.xml"
     },
     {
-        "merged": "E:\\AndroidStudioProjects\\DouBanApplication\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_search.xml",
-        "source": "E:\\AndroidStudioProjects\\DouBanApplication\\app\\src\\main\\res\\layout\\activity_search.xml"
+        "merged": "E:\\AndroidStudioProjects\\DouBanApplication\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_header.xml",
+        "source": "E:\\AndroidStudioProjects\\DouBanApplication\\app\\src\\main\\res\\layout\\item_header.xml"
     },
     {
         "merged": "E:\\AndroidStudioProjects\\DouBanApplication\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_tab.xml",

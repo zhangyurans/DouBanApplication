@@ -1,5 +1,6 @@
 package com.example.lenovo.doubanapplication.search;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,6 +12,12 @@ public class SearchMusic {
     private int start;
     private int total;
     private List<Music>musics;
+    public SearchMusic(){
+        count=0;
+        start=0;
+        total=0;
+        musics=new ArrayList<>();
+    }
     public class Music{
         private String id;
         private String title;
@@ -33,6 +40,9 @@ public class SearchMusic {
     }
     public int getTotal(){
         return total;
+    }
+    public void setStart(int mStart){
+        start=mStart;
     }
     public List<Music>getMusics(){
         return musics;

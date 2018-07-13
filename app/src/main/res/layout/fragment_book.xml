@@ -1,38 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-<LinearLayout
-    android:id="@+id/bookfragment_layout"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/doubanbookbackground"
-    >
-    <EditText
-        android:id="@+id/Input_booktext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:maxLines="2"
-        android:textColor="@color/doubanbooksearchtext"
-        android:textColorHint="@color/doubanbooksearchhint"
-        android:hint="请输入所需查找的图书名"
-        />
-    <Button
-        android:id="@+id/Search_bookbutton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/doubanbookbutton"
-        android:text="搜索图书"
-        android:textColor="@color/white"
-        />
-    <android.support.design.widget.CoordinatorLayout
-        android:id="@+id/bookcontainer"
+
+    <LinearLayout
+        android:id="@+id/bookfragment_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true">
-        <ImageView
-            android:id="@+id/book_image"
+        android:background="@color/doubanbookbackground"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/Input_booktext"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </android.support.design.widget.CoordinatorLayout>
-</LinearLayout>
+            android:layout_height="wrap_content"
+            android:hint="请输入所需查找的图书名"
+            android:imeOptions="actionSearch"
+            android:maxLines="2"
+            android:textColor="@color/doubanbooksearchtext"
+            android:textColorHint="@color/doubanbooksearchhint" />
+
+        <Button
+            android:id="@+id/Search_bookbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/doubanbookbutton"
+            android:text="搜索图书"
+            android:textColor="@color/white" />
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/bookcontainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/book_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
 </layout>
